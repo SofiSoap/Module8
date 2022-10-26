@@ -7,7 +7,7 @@ public class Testing {
 	
 	public static void main(String[] args) {
 		
-		int arraySize = 10000;
+		int arraySize = 200000000;
 		
 		int array1[] =  new int[arraySize];
 		int totalSum1 = 0;
@@ -21,11 +21,11 @@ public class Testing {
 //			System.out.println("Value of arrary [" + i+"] is " +value);
 		}
 		
-		MyThread thread1 = new MyThread(Arrays.copyOfRange(array1, 0, 2000));
-		MyThread thread2 = new MyThread(Arrays.copyOfRange(array1, 2000, 4000));
-		MyThread thread3 = new MyThread(Arrays.copyOfRange(array1, 4000, 6000));
-		MyThread thread4 = new MyThread(Arrays.copyOfRange(array1, 6000, 8000));
-		MyThread thread5 = new MyThread(Arrays.copyOfRange(array1, 8000, 10000));
+		MyThread thread1 = new MyThread(Arrays.copyOfRange(array1, 0, 40000000));
+		MyThread thread2 = new MyThread(Arrays.copyOfRange(array1, 40000000, 80000000));
+		MyThread thread3 = new MyThread(Arrays.copyOfRange(array1, 80000000, 120000000));
+		MyThread thread4 = new MyThread(Arrays.copyOfRange(array1, 120000000, 160000000));
+		MyThread thread5 = new MyThread(Arrays.copyOfRange(array1, 160000000, 200000000));
 
 		long startTime1 = System.nanoTime(); //Find start Time of multiThread, startTime 1
 		thread1.start();
